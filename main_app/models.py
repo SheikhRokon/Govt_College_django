@@ -27,6 +27,7 @@ class Notice(models.Model):
     title = models.CharField(max_length=500)
     date = models.DateTimeField(default=timezone.now)
     notice_file = models.FileField(upload_to='notices/')
+    
 
     class Meta:
         verbose_name = 'Notice'
@@ -34,4 +35,32 @@ class Notice(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Managing_committee(models.Model):
+    name = models.CharField(max_length=200)
+    designation = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='managing_committee_image')
+    ordering  = models.IntegerField(unique=True,blank=True,null=True)
+
+    class Meta:
+        verbose_name = "Managing_committee"
+        verbose_name_plural = "Managing_committees"
+
+    def __str__(self):
+        return self.name
+    
+class Teacher(models.Model):
+    name = models.CharField(max_length=200)
+    designation = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='Teacher_image')
+    ordering  = models.IntegerField(unique=True,blank=True,null=True)
+
+    class Meta:
+        verbose_name = "Teacher"
+        verbose_name_plural = "Teacher"
+
+    def __str__(self):
+        return self.name    
+
 
