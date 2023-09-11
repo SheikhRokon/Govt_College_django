@@ -1,6 +1,13 @@
 from django.shortcuts import render
+from .models import Institution_info
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'main_app/index.html')
+    institution_info = Institution_info.objects.all()
+    
+    context ={
+            'institution_info':institution_info
+        }
+    
+    return render(request, 'main_app/index.html', context)

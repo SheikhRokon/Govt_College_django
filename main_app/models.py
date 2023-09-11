@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.utils import timezone
 
 # Create your models here.
 class Institution_info(models.Model):
@@ -20,3 +21,17 @@ class Institution_info(models.Model):
 
     def __str__(self):
         return self.principal_name
+    
+
+class Notice(models.Model):
+    title = models.CharField(max_length=500)
+    date = models.DateTimeField(default=timezone.now)
+    notice_file = models.FileField(upload_to='notices/')
+
+    class Meta:
+        verbose_name = 'Notice'
+        verbose_name_plural = 'Notice'
+
+    def __str__(self):
+        return self.title
+
