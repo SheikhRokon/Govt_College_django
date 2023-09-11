@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../static/img/bangladesh-govt-logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        // content: ["./dist/**/*.{html,js}"],
+        theme: {
+          extend: {
+            fontFamily: {
+              kalpurush: ["kalpurush", "sans-serif"],
+            },
+            colors: {
+              navBg: "#003D59",
+              navHover: "#761116",
+              textPrimary: "#0000",
+              textSecondary: "#2D86C8",
+              footerBg: "#095563",
+              iconColor: "#752F90",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @font-face {
+        font-family: "kalpurush";
+        src: url("../static/fonts/kalpurush.ttf");
+      }
+      body {
+        transition: 0.9s;
+      }
+      .slider {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .slide {
+        display: none;
+        text-align: center;
+      }
+      .slide img {
+        height: 360px;
+      }
+      @media screen and (max-width: 768px) {
+        .slide img {
+          height: 220px;
+        }
+      }
+    </style>
+    <title>দারুশা কলেজ, রাজশাহী</title>
+  </head>
+  <body class="font-kalpurush">
+    <header>
+      <div class="h-7 w-full bg-[#006A44]"></div>
+
+      <!-- header top -->
+      <div>
+        <div class="flex justify-center my-4">
+          <img
+            src="../static/img/bangladesh-govt-logo.png"
+            alt=""
+            class="w-20 md:w-24 lg:w-28 mr-3"
+          />
+
+          <div class="flex items-center">
+            <div>
+              <h1
+                class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3E4FA6]"
+              >
+                দারুশা কলেজ, রাজশাহী
+              </h1>
+              <h3
+                class="text-xs md:text-lg lg:text-2xl mt-1 font-semibold text-center"
+              >
+                কলেজ কোড : ১১৫৩, কর্ণহার, পবা, রাজশাহী
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include "main_app/include/navbar.html" %}
+     
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'main_app/include/footer.html' %}
+    
+  
+      <script src="../static/js/custom.js"></script>
+    </body>
+  </html>
