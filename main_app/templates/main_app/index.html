@@ -313,14 +313,16 @@
           News
         </h4>
       </div>
+      
+      {% for x in institution_info %}
       <div class="flex items-center">
         <marquee behavior="" direction="" class="text-xs">
-          জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ
-          হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন
-          নিয়ে আসে প্রকৃতির মালখানা থেকে। জীবরঙ্গভূমিতে মানুষ এসে দেখা দেয়
-          দুই শূন্য হাতে মুঠো বেঁধে।
+          {{ x.news|safe }}
         </marquee>
       </div>
+      {% endfor %}
+        
+      
     </div>
 
     <!-- Slider start -->
@@ -370,26 +372,19 @@
         >
           অধ্যক্ষের বাণী
         </h3>
+        {% for x in institution_info %}
         <div>
-          
           <div class="inline-block float-left mr-2 bg-[#f5f5f5]">
             <img
-              src="../static/img/teacher.jpeg"
+              src="{{x.principal_image.url}}"
               alt=""
               class="w-20 lg:w-28"
             />
-            <h3 class="text-sm text-center font-semibold">মাহবুব হাসান</h3>
+            <h3 class="text-sm text-center font-semibold">{{ x.principal_name }}</h3>
           </div>
-
-          <p class="text-sm">
-            আমরা বাংলায় ওয়েব ডেডলপমেন্ট নিয়ে কাজ করতে গিয়ে প্রথম যে
-            সমস্যাটার মুখোমুখি হই, সেটা হলো, বাংলা ডেমো টেক্সট। ইংরেজির জন্য
-            lorem ipsum তো আছে । বাংলার জন্য কি আছে? সেই ধারনা থেকেই বাংলা
-            ডেমো টেক্সট তৈরীর চেষ্টা। HTML এর প্রয়োজনীয় প্রায় সব ফরম্যাটেই
-            বাংলা ডেমো টেক্সট তুলে ধরা হয়েছে। আশা করছি, এরি ক্ষুদ্র
-            প্রচেষ্টা আপনাদের কাজে আসবে।
-          </p>
+          <p class="text-sm">{{ x.principal_message|safe }}</p>
         </div>
+        {% endfor %}
       </div>
 
       <!-- উপধ্যক্ষের বাণী -->
@@ -399,25 +394,23 @@
         >
           উপধ্যক্ষের বাণী
         </h3>
+        
+        {% for x in institution_info %}
         <div>
           <div class="inline-block float-left mr-2 bg-[#f5f5f5]">
             <img
-              src="../static/img/bangladesh-govt-logo.png"
+              src="{{x.vice_principal_image.url}}"
               alt=""
               class="w-20 lg:w-28"
             />
-            <h3 class="text-sm text-center font-semibold">মাহবুব হাসান</h3>
+            <h3 class="text-sm text-center font-semibold">{{x.vice_principal_name}}</h3>
           </div>
 
-          <p class="text-sm">
-            আমরা বাংলায় ওয়েব ডেডলপমেন্ট নিয়ে কাজ করতে গিয়ে প্রথম যে
-            সমস্যাটার মুখোমুখি হই, সেটা হলো, বাংলা ডেমো টেক্সট। ইংরেজির জন্য
-            lorem ipsum তো আছে । বাংলার জন্য কি আছে? সেই ধারনা থেকেই বাংলা
-            ডেমো টেক্সট তৈরীর চেষ্টা। HTML এর প্রয়োজনীয় প্রায় সব ফরম্যাটেই
-            বাংলা ডেমো টেক্সট তুলে ধরা হয়েছে। আশা করছি, এরি ক্ষুদ্র
-            প্রচেষ্টা আপনাদের কাজে আসবে।
-          </p>
+          <p class="text-sm">{{ x.vice_principal_message|safe }}</p>
         </div>
+        {% endfor %}
+          
+        
       </div>
     </div>
 

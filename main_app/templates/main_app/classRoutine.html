@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../static/img/bangladesh-govt-logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <title>ক্লাস রুটিন | দারুশা কলেজ</title>
+  </head>
+  <body class="font-kalpurush">
+    <header>
+      <div class="h-7 w-full bg-[#006A44]"></div>
+
+      <!-- header top -->
+      <div>
+        <div class="flex justify-center my-4">
+          <img
+            src="../static/img/bangladesh-govt-logo.png"
+            alt=""
+            class="w-20 md:w-24 lg:w-28 mr-3"
+          />
+
+          <div class="flex items-center">
+            <div>
+              <h1
+                class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3E4FA6]"
+              >
+                দারুশা কলেজ, রাজশাহী
+              </h1>
+              <h3
+                class="text-xs md:text-lg lg:text-2xl mt-1 font-semibold text-center"
+              >
+                কলেজ কোড : ১১৫৩, কর্ণহার, পবা, রাজশাহী
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- navigation menu -->
+      <nav class="lg:bg-navBg">
+        <div class="lg:hidden text-right px-6">
+          <i
+            class="fas fa-bars py-1 px-3 text-lg border-2 rounded-md hover:cursor-pointer"
+            id="menubtn"
+          ></i>
+        </div>
+        <ul
+          class="lg:flex lg:justify-center bg-navBg text-white hidden py-4 lg:py-0"
+          id="mobilemenu"
+        >
+          <li class="border-r border-gray-400">
+            <a href="" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >প্রচ্ছদ</a
+            >
+          </li>
+          <li class="border-r border-gray-400 relative group">
+            <a
+              href="#"
+              class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >প্রশাসন <i class="fa-solid fa-caret-down"></i>
+            </a>
+            <ul
+              class="absolute w-full lg:w-max text-black lg:text-white bg-slate-300 lg:bg-navBg z-10 hidden group-hover:block"
+            >
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ১</a
+                >
+              </li>
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ২</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="border-r border-gray-400 relative group">
+            <a
+              href="#"
+              class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >শিক্ষার্থীদের তথ্য <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <ul
+              class="absolute w-full lg:w-max text-black lg:text-white bg-slate-300 lg:bg-navBg z-10 hidden group-hover:block"
+            >
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ১</a
+                >
+              </li>
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ২</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="border-r border-gray-400 relative group">
+            <a
+              href="#"
+              class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >ভর্তি <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <ul
+              class="absolute w-full lg:w-max text-black lg:text-white bg-slate-300 lg:bg-navBg z-10 hidden group-hover:block"
+            >
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ১</a
+                >
+              </li>
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ২</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="border-r border-gray-400">
+            <a href="" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >ডাউনলোড</a
+            >
+          </li>
+          <li class="border-r border-gray-400">
+            <a href="" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >রুটিন</a
+            >
+          </li>
+          <li class="border-r border-gray-400">
+            <a href="" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >ফলাফল</a
+            >
+          </li>
+          <li class="border-r border-gray-400">
+            <a href="" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >নোটিশ</a
+            >
+          </li>
+          <li class="border-r border-gray-400">
+            <a href="" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >ব্লগ</a
+            >
+          </li>
+          <li class="border-r border-gray-400 relative group">
+            <a
+              href="#"
+              class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >গ্যালারী <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <ul
+              class="absolute w-full lg:w-max text-black lg:text-white bg-slate-300 lg:bg-navBg z-10 hidden group-hover:block"
+            >
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ১</a
+                >
+              </li>
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ২</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="border-r border-gray-400 relative group">
+            <a
+              href="#"
+              class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >বিভিন্ন তথ্য <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <ul
+              class="absolute w-full lg:w-max text-black lg:text-white bg-slate-300 lg:bg-navBg z-10 hidden group-hover:block"
+            >
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ১</a
+                >
+              </li>
+              <li>
+                <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
+                  >সাব মেনু ২</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+              >যোগাযোগ</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main content start -->
+    <main class="mt-8">
+      <div>
+        <h3 class="text-center text-3xl font-semibold mb-4">ক্লাস রুটিন</h3>
+
+        <div class="lg:w-3/4 m-auto p-3">
+          <embed
+            src="../static/pdf/Summer-2022.pdf"
+            type="application/pdf"
+            class="w-full h-[600px]"
+          />
+        </div>
+        <div class="text-center m-10">
+          <a
+            href="../static/pdf/Summer-2022.pdf"
+            class="text-white bg-navBg py-2 px-10 font-sans rounded-md hover:underline"
+            >Download PDF</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <!-- footer starr -->
+    <footer class="bg-footerBg p-4">
+      <div class="lg:flex">
+        <!-- left -->
+        <div class="lg:w-1/4 p-6 mx-4 lg:border-r border-gray-400 mb-4 lg:mb-0">
+          <h3
+            class="text-white uppercase font-sans mb-4 mx-2 text-center lg:text-left"
+          >
+            More links
+          </h3>
+          <div class="grid grid-cols-4 lg:grid-cols-3">
+            <div class="p-2 h-16 w-16 m-auto">
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="m-auto"
+                />
+              </a>
+            </div>
+
+            <div class="p-2 h-16 w-16 m-auto">
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="m-auto"
+                />
+              </a>
+            </div>
+
+            <div class="p-2 h-16 w-16 m-auto">
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="m-auto"
+                />
+              </a>
+            </div>
+
+            <div class="p-2 h-16 w-16 m-auto">
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="m-auto"
+                />
+              </a>
+            </div>
+
+            <div class="p-2 h-16 w-16 m-auto">
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="m-auto"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- middle -->
+        <div
+          class="lg:w-2/4 border-t lg:border-t-0 lg:border-x border-gray-400 p-4 md:p-8 mx-2 md:mx-4 mb-4 lg:mb-0"
+        >
+          <h3
+            class="text-white uppercase font-sans mb-4 mx-2 text-center lg:text-left"
+          >
+            University of Bangladesh
+          </h3>
+          <div class="flex">
+            <div class="w-1/2">
+              <ul>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    University of Dhaka</a
+                  >
+                </li>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    Jahangirnagar University</a
+                  >
+                </li>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    Rajshahi University</a
+                  >
+                </li>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    Begum Rokeya University</a
+                  >
+                </li>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    HSTU</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-1/2">
+              <ul>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    University of Chittagong</a
+                  >
+                </li>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    Khulna University</a
+                  >
+                </li>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    Jagannath University</a
+                  >
+                </li>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    Islamic University, Kustia</a
+                  >
+                </li>
+                <li class="border-b">
+                  <a
+                    href=""
+                    class="block text-xs text-white py-1 px-2 font-sans hover:underline"
+                    ><i class="fa-solid fa-caret-right text-green-400"></i>
+                    BUET</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- right  -->
+        <div class="lg:w-1/4 lg:border-l border-gray-400 p-6 mx-4 mb-4 lg:mb-0">
+          <h3
+            class="text-white uppercase font-sans mb-4 mx-2 text-center lg:text-left"
+          >
+            contact us
+          </h3>
+          <div class="grid grid-cols-4">
+            <div>
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="rounded-full w-8/12 m-auto"
+                />
+              </a>
+            </div>
+
+            <div>
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="rounded-full w-8/12 m-auto"
+                />
+              </a>
+            </div>
+
+            <div>
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="rounded-full w-8/12 m-auto"
+                />
+              </a>
+            </div>
+
+            <div>
+              <a href="">
+                <img
+                  src="../static/img/digital-content.jpg"
+                  alt=""
+                  class="rounded-full w-8/12 m-auto"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="bg-black">
+      <p class="text-gray-400 p-4 text-center font-sans text-xs">
+        &copy; All Rights Reserved by Darusha College, 2023
+      </p>
+    </div>
+
+    <script src="../static/js/custom.js"></script>
+  </body>
+</html>
