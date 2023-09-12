@@ -1,3 +1,22 @@
+// tailwind config
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        kalpurush: ["kalpurush", "sans-serif"],
+      },
+      colors: {
+        navBg: "#003D59",
+        navHover: "#761116",
+        textPrimary: "#0000",
+        textSecondary: "#2D86C8",
+        footerBg: "#095563",
+        iconColor: "#752F90",
+      },
+    },
+  },
+};
+
 // toggle menu
 let isMenuOpen = 0;
 const mobileBtn = document.querySelector("#menubtn");

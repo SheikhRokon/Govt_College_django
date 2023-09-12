@@ -11,3 +11,6 @@ def index(request):
         }
     
     return render(request, 'main_app/index.html', context)
+
+def classRoutine(request):
+    return render(request, 'main_app/classRoutine.html')
