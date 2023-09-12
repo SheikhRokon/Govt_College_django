@@ -24,9 +24,14 @@ def notices(request):
     return render(request, 'main_app/notices.html',context)
 
 def managing_committee(request):
-    managing = Managing_committee.objects.all()
+    managing = Managing_committee.objects.all().exclude(ordering=1)
+    head = Managing_committee.objects.get(ordering=1)
     
     context = {
-        'managing': managing
+        'managing': managing,
+        'head': head
         }
     return render(request, 'main_app/managing_committee.html',context)
+
+def photoGallery(request):
+    return render(request, 'main_app/photoGallery.html')
