@@ -8,6 +8,7 @@ urlpatterns = [
      path('classRoutine/',classRoutine ,name='classRoutine'),
      path('notices/',notices ,name='notices'),
      path('managing_committee/',managing_committee ,name='managing_committee'),
+     path('teachers/',teacher ,name='teachers'),
      path('photoGallery/',photoGallery ,name='photoGallery'),
      path('video_gallery/',video_gallery ,name='video_gallery'),
 ]

@@ -1,0 +1,58 @@
+{% extends 'main_app/bass.html' %}
+
+{% load static %}
+
+{% block content %}
+
+       <!-- main content start -->
+       <main class="mt-8 p-4">
+        <!-- Main content start -->
+        <section class="lg:w-3/4 m-auto">
+          <h3 class="text-center text-3xl font-semibold mb-8">শিক্ষক মণ্ডলী </h3>
+  
+          <!-- শিক্ষক মণ্ডলী  -->
+          <div class="mb-8">
+            <div class="bg-[#f5f5f5] w-2/4 md:w-40 m-auto shadow-md">
+              <div>
+                <img src="{{ teacher_h.image.url }}" alt="" class="w-full m-auto"/>
+              </div>
+              <div>
+                <div class="p-3 text-center">
+                  <h3 class="text-md font-bold text-navBg">{{ teacher_h.name }}</h3>
+                  <h4 class="text-xs font-normal">{{ teacher_h.designation }}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+  
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-14 md:gap-20 lg:gap-28">
+            
+            {% for x in teacher_all %}
+            <div class="bg-[#f5f5f5] shadow-md">
+              <div>
+                <img
+                  src="{{ x.image.url }}"
+                  alt=""
+                  class="w-full m-auto"
+                />
+              </div>
+              <div>
+                <div class="p-3 text-center">
+                  <h3 class="text-emerald-300 font-bold text-navBg">
+                    {{ x.name }}
+                  </h3>
+                  <h4 class="text-xs font-normal">{{ x.designation }}</h4>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+              
+            
+            
+          </div>
+        </section>
+      </main>
+{% endblock %}    
+
+   

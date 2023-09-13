@@ -33,6 +33,16 @@ def managing_committee(request):
         }
     return render(request, 'main_app/managing_committee.html',context)
 
+def teacher(request):
+    teacher_all = Teacher.objects.all().exclude(ordering=1)
+    teacher_h = Teacher.objects.get(ordering=1)
+    
+    context = {
+        'teacher_h': teacher_h,
+        'teacher_all': teacher_all
+        }
+    return render(request, 'main_app/teacher.html',context)
+
 
 
 def photoGallery(request):
