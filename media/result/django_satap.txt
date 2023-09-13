@@ -1,0 +1,33 @@
+1 python -m venv env
+
+2 pip install django
+
+3 django-admin sartproject project_name
+
+4 cd project_name
+
+5 django-admin sartapp app_name
+
+6 project  settings.py install app_name
+
+7 project urls.py 
+
+from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',include('user_app.urls')),
+]
+
+8 create app in urls.py
+
+from django.urls import path
+from .views import index 
+
+urlpatterns = [
+    path('',index ,name='index'),
+]
+
+
+

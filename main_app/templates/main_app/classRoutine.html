@@ -3,28 +3,42 @@
 {% load static %}
 
 {% block content %}
-
     <!-- main content start -->
-    <main class="mt-8">
+    <main class="my-8">
       <div>
         <h3 class="text-center text-3xl font-semibold mb-4">ক্লাস রুটিন</h3>
 
         <div class="lg:w-3/4 m-auto p-3">
-          <embed
-            src="{% static 'pdf/Summer-2022.pdf' %}"
-            type="application/pdf"
-            class="w-full h-[600px]"
-          />
-        </div>
-        <div class="text-center m-10">
-          <a
-            href="{% static 'pdf/Summer-2022.pdf' %}" download class="text-white bg-navBg py-2 px-10 font-sans rounded-md hover:underline"
-            >Download PDF</a
+          <table
+            class="table-auto w-full border-collapse border border-slate-400"
           >
+            <thead>
+              <tr class="bg-navBg text-white">
+                <th class="p-2 border border-slate-300">ক্রমিক</th>
+                <th class="p-2 border border-slate-300">বর্ষ / শাখা </th>
+                <th class="p-2 border border-slate-300">ডাউনলোড</th>
+              </tr>
+            </thead>
+            
+            {% for x in routine %}
+            <tbody class="text-sm">
+              <tr>
+                <td class="text-center p-2 border border-slate-300">{{ x.id }}</td>
+                <td class="text-center p-2 border border-slate-300"><a href="{{x.routine_file.url}}">{{ x.title }}</a></td>
+                <td class="text-center p-2 border border-slate-300">
+                  <a href="{{x.routine_file.url}}" download ><i class="fa-solid fa-download text-xl text-navBg"></i
+                  ></a>
+                </td>
+              </tr>
+              
+            </tbody>
+            {% endfor %}
+              
+            
+          </table>
         </div>
       </div>
     </main>
+{% endblock %}
 
-{% endblock %}    
-
-   
+    

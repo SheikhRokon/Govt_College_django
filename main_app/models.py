@@ -103,6 +103,17 @@ class Result(models.Model):
         verbose_name_plural = 'Result'
 
     def __str__(self):
-        return self.title          
+        return self.title 
+
+class ClassRoutine(models.Model):
+    title = models.CharField(max_length=500)
+    routine_file = models.FileField(upload_to='result/')
+    class Meta:
+        verbose_name = 'Class Routine'
+        verbose_name_plural = 'Class Routine'
+
+    def __str__(self):
+        return self.title
+             
 
 

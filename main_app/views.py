@@ -10,10 +10,14 @@ def index(request):
             'institution_info':institution_info
         }
     
-    return render(request, 'main_app/index.html', context)
+    return render(request, 'main_app/index.html', context) 
 
 def classRoutine(request):
-    return render(request, 'main_app/classRoutine.html')
+    routine = ClassRoutine.objects.all().order_by("-id")
+    context = {
+        'routine': routine
+        }
+    return render(request, 'main_app/classRoutine.html',context)
 
 def notices(request):
     notice = Notice.objects.all().order_by("-id")
