@@ -16,8 +16,8 @@ class Institution_info(models.Model):
     institution_history = RichTextUploadingField()
     
     class Meta:
-        verbose_name = 'Institution_info'
-        verbose_name_plural = 'Institution_infos'
+        verbose_name = 'Institution info'
+        verbose_name_plural = 'Institution info'
 
     def __str__(self):
         return self.principal_name
@@ -44,8 +44,8 @@ class Managing_committee(models.Model):
     ordering  = models.IntegerField(unique=True,blank=True,null=True)
 
     class Meta:
-        verbose_name = "Managing_committee"
-        verbose_name_plural = "Managing_committees"
+        verbose_name = "Managing committee"
+        verbose_name_plural = "Managing committees"
 
     def __str__(self):
         return self.name
@@ -61,6 +61,35 @@ class Teacher(models.Model):
         verbose_name_plural = "Teacher"
 
     def __str__(self):
-        return self.name    
+        return self.name
+    
+    
+    
+class Photo_gallery(models.Model):
+    title = models.CharField(max_length=150)
+    image = models.ImageField(upload_to='p_image')
+   
+
+    class Meta:
+        
+
+        verbose_name = 'Photo gallery'
+        verbose_name_plural = 'Photo gallery'
+
+    def __str__(self):
+        
+        return str(self.title)
+
+class Video_gallery(models.Model):
+    title = models.CharField(max_length=150)
+    youtube_link = models.URLField(max_length=200,blank=True)
+
+    class Meta:
+        verbose_name = 'Video gallery'
+        verbose_name_plural = 'Video gallery'
+
+    def __str__(self):
+        
+        return str(self.title)        
 
 
