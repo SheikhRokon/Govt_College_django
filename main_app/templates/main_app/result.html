@@ -1,0 +1,48 @@
+{% extends 'main_app/bass.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- main content start -->
+    <main class="my-8">
+      <div>
+        <h3 class="text-center text-3xl font-semibold mb-4">ফলাফল</h3>
+
+        <div class="lg:w-3/4 m-auto p-3">
+          <table
+            class="table-auto w-full border-collapse border border-slate-400"
+          >
+            <thead>
+              <tr class="bg-navBg text-white">
+                <th class="p-2 border border-slate-300">ক্রমিক</th>
+                <th class="p-2 border border-slate-300">বর্ষ</th>
+                <th class="p-2border border-slate-300">প্রকাশের তারিখ</th>
+                <th class="p-2 border border-slate-300">ডাউনলোড</th>
+              </tr>
+            </thead>
+            
+            {% for x in notice %}
+            <tbody class="text-sm">
+              <tr>
+                <td class="text-center p-2 border border-slate-300">{{ x.id }}</td>
+                <td class="text-center p-2 border border-slate-300">
+                  {{ x.title }}
+                </td>
+                <td class=" text-center p-2 border border-slate-300">{{ x.date }}</td>
+                <td class="text-center p-2 border border-slate-300">
+                  <a href="{{x.notice_file.url}}" download ><i class="fa-solid fa-download text-xl text-navBg"></i
+                  ></a>
+                </td>
+              </tr>
+              
+            </tbody>
+            {% endfor %}
+              
+            
+          </table>
+        </div>
+      </div>
+    </main>
+{% endblock %}
+
+    

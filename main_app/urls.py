@@ -11,4 +11,5 @@ urlpatterns = [
      path('teachers/',teacher ,name='teachers'),
      path('photoGallery/',photoGallery ,name='photoGallery'),
      path('video_gallery/',video_gallery ,name='video_gallery'),
+     path('result/',result ,name='result'),
 ]

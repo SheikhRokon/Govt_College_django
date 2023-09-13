@@ -53,10 +53,12 @@ def photoGallery(request):
     return render(request, 'main_app/photoGallery.html',context)
 
     
-
 def video_gallery(request):
     video_g = Video_gallery.objects.all()
     context={
         'video_g':video_g
     }
     return render(request, 'main_app/videoGallery.html',context)
+
+def result(request):
+    return render(request, 'main_app/result.html')
