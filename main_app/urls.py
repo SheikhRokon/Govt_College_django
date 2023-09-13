@@ -9,4 +9,5 @@ urlpatterns = [
      path('notices/',notices ,name='notices'),
      path('managing_committee/',managing_committee ,name='managing_committee'),
      path('photoGallery/',photoGallery ,name='photoGallery'),
+     path('video_gallery/',video_gallery ,name='photoGallery'),
 ]

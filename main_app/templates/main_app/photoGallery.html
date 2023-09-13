@@ -11,52 +11,19 @@
   
           <div class="mb-8 m-auto">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+              
+              {% for x in photo_g %}
               <div class="mb-2 h-64">
-                <a href="../static/img/7.jpeg" data-lightbox="roadtrip">
+                <a href="{{x.image.url}}" data-lightbox="roadtrip">
                   <img
-                    src="../static/img/7.jpeg"
+                    src="{{x.image.url}}"
                     alt=""
                     class="w-full h-64 rounded-md"
                   />
                 </a>
               </div>
-              <div class="mb-2 h-64">
-                <a href="../static/img/6.jpg" data-lightbox="roadtrip">
-                  <img
-                    src="../static/img/6.jpg"
-                    alt=""
-                    class="w-full h-64 rounded-md"
-                  />
-                </a>
-              </div>
-              <div class="mb-2 h-64">
-                <a href="../static/img/1.jpg" data-lightbox="roadtrip">
-                  <img
-                    src="../static/img/1.jpg"
-                    alt=""
-                    class="w-full h-64 rounded-md"
-                  />
-                </a>
-              </div>
-              <div class="mb-2 h-64">
-                <a href="../static/img/7.jpeg" data-lightbox="roadtrip">
-                  <img
-                    src="../static/img/7.jpeg"
-                    alt=""
-                    class="w-full h-64 rounded-md"
-                  />
-                </a>
-              </div>
-              <div class="mb-2 h-64">
-                <a href="../static/img/7.jpeg" data-lightbox="roadtrip">
-                  <img
-                    src="../static/img/7.jpeg"
-                    alt=""
-                    class="w-full h-64 rounded-md"
-                  />
-                </a>
-              </div>
-              <div class="mb-2 h-64">
+              {% endfor %}
+              
                 <a href="../static/img/7.jpeg" data-lightbox="roadtrip">
                   <img
                     src="../static/img/7.jpeg"

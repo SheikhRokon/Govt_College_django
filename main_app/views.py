@@ -33,5 +33,20 @@ def managing_committee(request):
         }
     return render(request, 'main_app/managing_committee.html',context)
 
+
+
 def photoGallery(request):
-    return render(request, 'main_app/photoGallery.html')
+    photo_g = Photo_gallery.objects.all()
+    context={
+        'photo_g':photo_g
+    }
+    return render(request, 'main_app/photoGallery.html',context)
+
+    
+
+def video_gallery(request):
+    video_g = Video_gallery.objects.all()
+    context={
+        'video_g':video_g
+    }
+    return render(request, 'main_app/videoGallery.html',context)
