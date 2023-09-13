@@ -90,6 +90,19 @@ class Video_gallery(models.Model):
 
     def __str__(self):
         
-        return str(self.title)        
+        return str(self.title)  
+    
+class Result(models.Model):
+    title = models.CharField(max_length=500)
+    date = models.DateTimeField(default=timezone.now)
+    result_file = models.FileField(upload_to='result/')
+    
+
+    class Meta:
+        verbose_name = 'Result'
+        verbose_name_plural = 'Result'
+
+    def __str__(self):
+        return self.title          
 
 

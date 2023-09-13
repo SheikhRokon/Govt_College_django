@@ -61,4 +61,8 @@ def video_gallery(request):
     return render(request, 'main_app/videoGallery.html',context)
 
 def result(request):
-    return render(request, 'main_app/result.html')
+    results = Result.objects.all().order_by('-id')
+    context = {
+        'results': results
+        }
+    return render(request, 'main_app/result.html',context)

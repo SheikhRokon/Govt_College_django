@@ -21,7 +21,7 @@
               </tr>
             </thead>
             
-            {% for x in notice %}
+            {% for x in results %}
             <tbody class="text-sm">
               <tr>
                 <td class="text-center p-2 border border-slate-300">{{ x.id }}</td>
@@ -30,7 +30,7 @@
                 </td>
                 <td class=" text-center p-2 border border-slate-300">{{ x.date }}</td>
                 <td class="text-center p-2 border border-slate-300">
-                  <a href="{{x.notice_file.url}}" download ><i class="fa-solid fa-download text-xl text-navBg"></i
+                  <a href="{{x.result_file.url}}" download ><i class="fa-solid fa-download text-xl text-navBg"></i
                   ></a>
                 </td>
               </tr>
