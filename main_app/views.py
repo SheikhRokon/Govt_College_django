@@ -73,7 +73,29 @@ def result(request):
 
 def students_info(request):
     one = Add_Student_info.objects.filter(select_class='class_1').order_by('id')
+    two = Add_Student_info.objects.filter(select_class='class_2').order_by('id')
+    three = Add_Student_info.objects.filter(select_class='class_3').order_by('id')
+    four = Add_Student_info.objects.filter(select_class='class_4').order_by('id')
+    five = Add_Student_info.objects.filter(select_class='class_5').order_by('id')
+    six = Add_Student_info.objects.filter(select_class='class_6').order_by('id')
+    seven = Add_Student_info.objects.filter(select_class='class_7').order_by('id')
+    eight = Add_Student_info.objects.filter(select_class='class_8').order_by('id')
+    nine = Add_Student_info.objects.filter(select_class='class_9').order_by('id')
+    ten = Add_Student_info.objects.filter(select_class='class_10').order_by('id')
+    inter_1 = Add_Student_info.objects.filter(select_class='inter_first_year').order_by('id')
+    inter_2 = Add_Student_info.objects.filter(select_class='inter_second_year').order_by('id')
     context = {
         'one': one,
+        'two': two,
+        'three': three,
+        'four': four,
+        'five': five,
+        'six': six,
+        'seven':seven,
+        'eight': eight,
+        'nine': nine,
+        'ten': ten,
+        'inter_1': inter_1,
+        'inter_2': inter_2,
     }
     return render(request, 'main_app/student_info.html', context)
