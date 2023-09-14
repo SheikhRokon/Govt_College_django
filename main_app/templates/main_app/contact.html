@@ -1,0 +1,116 @@
+{% extends 'main_app/bass.html' %}
+
+
+{% block content %}
+    
+    <!-- main content start -->
+    <main class="mt-8 px-4">
+        <div>
+          <h3 class="text-center text-3xl font-semibold">যোগাযোগ</h3>
+          <h4 class="text-center tex mb-2 font-semibold">দারুশা কলেজ, রাজশাহী</h4>
+          <hr class="w-1/4 m-auto mb-8 border-navBg" />
+        </div>
+  
+        <div class="md:flex m-auto rounded-md mb-8">
+          <!-- contact information -->
+          <div class="md:w-2/6 p-8 bg-navBg text-white rounded-md">
+            <h3 class="text-white font-sans text-center text-xl font-bold mb-8">
+              Contact info
+            </h3>
+            <div class="flex items-center mb-4">
+              <i class="fa-solid fa-location-dot text-sky-300 text-lg"></i>
+              <p class="ml-2 text-xs md:text-sm">
+                রোড-২, ব্লক-এ, আফতাবনগর, মেরুল বাড্ডা, ঢাকা।
+              </p>
+            </div>
+            <div class="mb-4">
+              <ul>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-phone text-sky-300 text-lg"></i>
+                  <p class="ml-2 text-xs md:text-sm font-sans">0199999999</p>
+                </li>
+  
+                <li class="flex items-center">
+                  <i class="fa-solid fa-phone text-sky-300 text-lg"></i>
+                  <p class="ml-2 text-xs md:text-sm font-sans">0188888888</p>
+                </li>
+              </ul>
+            </div>
+            <div class="flex items-center">
+              <ul>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-envelope text-sky-300 text-lg"></i>
+                  <p class="ml-2 text-xs md:text-sm font-sans">abc@gmail.com</p>
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-envelope text-sky-300 text-lg"></i>
+                  <p class="ml-2 text-xs md:text-sm font-sans">xyz@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- contact form -->
+          <div class="md:w-4/6 mt-8 md:mt-0 md:ml-4">
+            <form action="">
+              <div class="grid lg:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  class="p-2 bg-[#f5f5f5] rounded-md outline-none border-4 border-transparent focus:border-green-50 font-sans"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  class="p-2 bg-[#f5f5f5] rounded-md outline-none border-4 border-transparent focus:border-green-50 font-sans"
+                />
+                <input
+                  type="number"
+                  name="mobile"
+                  placeholder="Your Mobile Number"
+                  required
+                  class="p-2 bg-[#f5f5f5] rounded-md outline-none border-4 border-transparent focus:border-green-50 font-sans"
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Message subject"
+                  required
+                  class="p-2 bg-[#f5f5f5] rounded-md outline-none border-4 border-transparent focus:border-green-50 font-sans"
+                />
+              </div>
+              <div class="my-4">
+                <textarea
+                  name="Message"
+                  placeholder="Write message"
+                  required
+                  class="w-full h-36 p-2 bg-[#f5f5f5] rounded-md outline-none border-4 border-transparent focus:border-green-50 font-sans"
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                class="w-full bg-navBg text-white p-2 rounded-md font-sans hover:cursor-pointer"
+              />
+            </form>
+          </div>
+        </div>
+        <!-- embed map  -->
+        <div class="w-full h-72 mb-8">
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d318.11692953547856!2d90.42666495737888!3d23.767620303219097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf537d1f2e09%3A0x8fe7a3faf331a140!2sUniverse%20IT%20Institute!5e0!3m2!1sen!2sbd!4v1694674120496!5m2!1sen!2sbd"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              width="100%"
+              height="288px"
+            ></iframe>
+          </div>
+        </div>
+      </main>
+
+{% endblock %}      

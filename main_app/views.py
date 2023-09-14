@@ -86,3 +86,6 @@ def students_info(request):
         'students': students,
     }
     return render(request, 'main_app/student_info.html', context)
+
+def contact(request):
+    return render(request, 'main_app/contact.html')
