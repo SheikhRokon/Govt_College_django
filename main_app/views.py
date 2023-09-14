@@ -70,3 +70,6 @@ def result(request):
         'results': results
         }
     return render(request, 'main_app/result.html',context)
+
+def students_info(request):
+    return render(request, 'main_app/student_info.html')

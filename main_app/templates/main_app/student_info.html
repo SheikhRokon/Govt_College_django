@@ -1,0 +1,79 @@
+{% extends 'main_app/bass.html' %}
+
+
+{% block content %}
+
+<!-- main content start -->
+<main class="flex flex-col lg:flex-row mt-6 px-4">
+    <!-- Left sidebar start-->
+    <aside class="lg:w-1/4 p-5 pt-0">
+      <form action="">
+        <select
+          name="class"
+          required
+          class="w-full border-2 rounded-md p-2 font-sans mb-2"
+        >
+          <option value="" disabled selected>Select class</option>
+          <option value="one">Class 1</option>
+          <option value="two">Class 2</option>
+        </select>
+      </form>
+    </aside>
+
+    <section class="lg:w-3/4 p-3 pt-0">
+      <div class="">
+        <table
+          class="table-auto w-full border-collapse border border-slate-400"
+        >
+          <thead>
+            <tr class="bg-navBg text-white">
+              <th class="p-2 border border-slate-300">রোল নং</th>
+              <th class="p-2 border border-slate-300">ছবি</th>
+              <th class="p-2 border border-slate-300">নাম</th>
+              <th class="p-2border border-slate-300">সেকশন</th>
+              <th class="p-2 border border-slate-300">ঠিকানা</th>
+              <th class="p-2 border border-slate-300">গার্ডিয়ান মোবাইল</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr>
+              <td class="text-center p-2 border border-slate-300">০১</td>
+              <td class="p-1 text-center border border-slate-300">
+                <img
+                  src="../static/img/teacher.jpeg"
+                  alt=""
+                  class="m-auto w-9"
+                />
+              </td>
+              <td class="p-2 border border-slate-300">মাহবুব হাসান</td>
+              <td class="p-2 text-center border border-slate-300">ক</td>
+              <td class="text-center p-2 border border-slate-300">
+                বরাব, রূপগঞ্জ, নারায়ণগঞ্জ
+              </td>
+              <td class="text-center p-2 border border-slate-300">
+                ০১৯৯৯৯৯৯৯৯
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center p-2 border border-slate-300">০২</td>
+              <td class="p-1 text-center border border-slate-300">
+                <img
+                  src="../static/img/teacher.jpeg"
+                  alt=""
+                  class="m-auto w-9"
+                />
+              </td>
+              <td class="p-2 border border-slate-300">মাহবুব হাসান</td>
+              <td class="p-2 text-center border border-slate-300">ক</td>
+              <td class="text-center p-2 border border-slate-300">রামপুরা</td>
+              <td class="text-center p-2 border border-slate-300">
+                ০১৯৯৯৯৯৯৯৯
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+{% endblock %}  

@@ -114,6 +114,46 @@ class ClassRoutine(models.Model):
 
     def __str__(self):
         return self.title
+    
+class Add_Student_info(models.Model):
+    Class_Name =(
+        ('class_1','class_1'),
+        ('class_2','class_2'),
+        ('class_3','class_3'),
+        ('class_4','class_4'),
+        ('class_5','class_5'),
+        ('class_6','class_6'),
+        ('class_7','class_7'),
+        ('class_8','class_8'),
+        ('class_9','class_9'),
+        ('class_10','class_10'),
+        ('inter_first_year','inter_first_year'),
+        ('inter_second_year','inter_second_year'),
+    )
+    select_class = models.CharField(max_length=200,choices=Class_Name)
+    student_class_roll = models.IntegerField()
+    student_name = models.CharField(max_length=200)
+    student_image = models.ImageField(upload_to='student_image')
+    guardian_number_1 = models.CharField(max_length=15, blank=True, null=True)
+    guardian_number_2 = models.CharField(max_length=15, blank=True, null=True)
+    Section =(
+        ('ক','ক'),
+        ('খ','খ'),
+        ('গ','গ'),
+        ('ঘ','ঘ'),
+        ('ঙ','ঙ'),
+        ('চ','চ'),
+        ('ছ','ছ'),
+    )
+    select_sections = models.CharField(max_length=5,choices=Section)
+
+    class Meta:
+        verbose_name = 'Add Student Info'
+        verbose_name_plural = 'Add Student info'
+
+    def __str__(self):
+        return self.student_name + ' (' + self.select_class +')' + '( ' + self.select_sections + ' )'
+    
              
 
 
