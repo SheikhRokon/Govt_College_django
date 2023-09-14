@@ -71,13 +71,9 @@ class Photo_gallery(models.Model):
    
 
     class Meta:
-        
-
-        verbose_name = 'Photo gallery'
         verbose_name_plural = 'Photo gallery'
 
     def __str__(self):
-        
         return str(self.title)
 
 class Video_gallery(models.Model):
@@ -85,13 +81,12 @@ class Video_gallery(models.Model):
     youtube_link = models.URLField(max_length=200,blank=True)
 
     class Meta:
-        verbose_name = 'Video gallery'
         verbose_name_plural = 'Video gallery'
 
     def __str__(self):
-        
         return str(self.title)  
     
+
 class Result(models.Model):
     title = models.CharField(max_length=500)
     date = models.DateTimeField(default=timezone.now)
@@ -149,8 +144,8 @@ class Add_Student_info(models.Model):
     select_sections = models.CharField(max_length=5,choices=Section)
 
     class Meta:
-        verbose_name = 'Add Student Info'
         verbose_name_plural = 'Add Student info'
+        ordering = ['student_class_roll']
 
     def __str__(self):
         return self.student_name + ' (' + self.select_class +')' + '( ' + self.select_sections + ' )'

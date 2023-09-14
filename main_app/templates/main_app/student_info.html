@@ -7,26 +7,27 @@
 <main class="flex flex-col lg:flex-row mt-6 px-4">
     <!-- Left sidebar start-->
     <aside class="lg:w-1/4 p-5 pt-0">
-      <form action="">
+      <form action="" method="GET">
         <select
           name="class"
           required
           class="w-full border-2 rounded-md p-2 font-sans mb-2"
         >
-          <option value="" disabled selected>Select class</option>
-          <option value="one"><a href="#">প্রথম শ্রেণী</a></option>
-          <option value="two"><a href="#">দ্বিতীয় শ্রেণী</a></option>
-          <option value="two"><a href="#">তৃতীয় শ্রেণী</a></option>
-          <option value="two"><a href="#">চতুর্থ শ্রেণী</a></option>
-          <option value="two"><a href="#">পঞ্চম শ্রেণী</a></option>
-          <option value="two"><a href="#">ষষ্ঠ শ্রেণী</a></option>
-          <option value="two"><a href="#">সপ্তম শ্রেণী</a></option>
-          <option value="two"><a href="#">অষ্টম শ্রেণী</a></option>
-          <option value="two"><a href="#">নবম শ্রেণী</a></option>
-          <option value="two"><a href="#">দশম শ্রেণী</a></option>
-          <option value="two"><a href="#">ইন্টার প্রথম বর্ষ</a></option> 
-          <option value="two"><a href="#">দ্বিতীয় প্রথম বর্ষ</a></option>
+          <option value="" selected>Select class</option>
+          <option value="class_1"><a href="#">প্রথম শ্রেণী</a></option>
+          <option value="class_2"><a href="#">দ্বিতীয় শ্রেণী</a></option>
+          <option value="class_3"><a href="#">তৃতীয় শ্রেণী</a></option>
+          <option value="class_4"><a href="#">চতুর্থ শ্রেণী</a></option>
+          <option value="class_5"><a href="#">পঞ্চম শ্রেণী</a></option>
+          <option value="class_6"><a href="#">ষষ্ঠ শ্রেণী</a></option>
+          <option value="class_7"><a href="#">সপ্তম শ্রেণী</a></option>
+          <option value="class_8"><a href="#">অষ্টম শ্রেণী</a></option>
+          <option value="class_9"><a href="#">নবম শ্রেণী</a></option>
+          <option value="class_10"><a href="#">দশম শ্রেণী</a></option>
+          <option value="inter_first_year"><a href="#">ইন্টার প্রথম বর্ষ</a></option> 
+          <option value="inter_second_year"><a href="#">দ্বিতীয় প্রথম বর্ষ</a></option>
         </select>
+        <button type="submit" class="btn btn-primary text-center ">Search</button>
       </form>
     </aside>
 
@@ -47,26 +48,20 @@
           </thead>
           <tbody class="text-sm">
             
-            {% for x in one %}
+            {% for x in students %}
             <tr>
                 <td class="text-center p-2 border border-slate-300">{{x.student_class_roll}}</td>
                 <td class="p-1 text-center border border-slate-300">
                   <img
-                    src="{{x.student_image.url}}"
-                    alt=""
-                    class="m-auto w-9"
+                    src="{{x.student_image.url}}" alt="" class="m-auto w-12"
                   />
                 </td>
                 <td class="p-2 text-center border border-slate-300">{{ x.student_name }}</td>
                 <td class="p-2 text-center border border-slate-300">{{ x.select_sections }}</td>
                 <td class="text-center p-2 border border-slate-300">{{ x.address }}</td>
                 <td class="text-center p-2 border border-slate-300">{{ x.guardian_number_1 }}</td>
-                <td class="text-center p-2 border border-slate-300">{{ x.guardian_number_2 }}</td>
               </tr>
             {% endfor %}
-                
-            
-            
           </tbody>
         </table>
       </div>
