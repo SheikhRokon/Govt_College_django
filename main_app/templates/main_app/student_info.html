@@ -14,8 +14,18 @@
           class="w-full border-2 rounded-md p-2 font-sans mb-2"
         >
           <option value="" disabled selected>Select class</option>
-          <option value="one">Class 1</option>
-          <option value="two">Class 2</option>
+          <option value="one"><a href="#">প্রথম শ্রেণী</a></option>
+          <option value="two"><a href="#">দ্বিতীয় শ্রেণী</a></option>
+          <option value="two"><a href="#">তৃতীয় শ্রেণী</a></option>
+          <option value="two"><a href="#">চতুর্থ শ্রেণী</a></option>
+          <option value="two"><a href="#">পঞ্চম শ্রেণী</a></option>
+          <option value="two"><a href="#">ষষ্ঠ শ্রেণী</a></option>
+          <option value="two"><a href="#">সপ্তম শ্রেণী</a></option>
+          <option value="two"><a href="#">অষ্টম শ্রেণী</a></option>
+          <option value="two"><a href="#">নবম শ্রেণী</a></option>
+          <option value="two"><a href="#">দশম শ্রেণী</a></option>
+          <option value="two"><a href="#">ইন্টার প্রথম বর্ষ</a></option> 
+          <option value="two"><a href="#">দ্বিতীয় প্রথম বর্ষ</a></option>
         </select>
       </form>
     </aside>
@@ -36,40 +46,27 @@
             </tr>
           </thead>
           <tbody class="text-sm">
+            
+            {% for x in one %}
             <tr>
-              <td class="text-center p-2 border border-slate-300">০১</td>
-              <td class="p-1 text-center border border-slate-300">
-                <img
-                  src="../static/img/teacher.jpeg"
-                  alt=""
-                  class="m-auto w-9"
-                />
-              </td>
-              <td class="p-2 border border-slate-300">মাহবুব হাসান</td>
-              <td class="p-2 text-center border border-slate-300">ক</td>
-              <td class="text-center p-2 border border-slate-300">
-                বরাব, রূপগঞ্জ, নারায়ণগঞ্জ
-              </td>
-              <td class="text-center p-2 border border-slate-300">
-                ০১৯৯৯৯৯৯৯৯
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center p-2 border border-slate-300">০২</td>
-              <td class="p-1 text-center border border-slate-300">
-                <img
-                  src="../static/img/teacher.jpeg"
-                  alt=""
-                  class="m-auto w-9"
-                />
-              </td>
-              <td class="p-2 border border-slate-300">মাহবুব হাসান</td>
-              <td class="p-2 text-center border border-slate-300">ক</td>
-              <td class="text-center p-2 border border-slate-300">রামপুরা</td>
-              <td class="text-center p-2 border border-slate-300">
-                ০১৯৯৯৯৯৯৯৯
-              </td>
-            </tr>
+                <td class="text-center p-2 border border-slate-300">{{x.student_class_roll}}</td>
+                <td class="p-1 text-center border border-slate-300">
+                  <img
+                    src="{{x.student_image.url}}"
+                    alt=""
+                    class="m-auto w-9"
+                  />
+                </td>
+                <td class="p-2 text-center border border-slate-300">{{ x.student_name }}</td>
+                <td class="p-2 text-center border border-slate-300">{{ x.select_sections }}</td>
+                <td class="text-center p-2 border border-slate-300">{{ x.address }}</td>
+                <td class="text-center p-2 border border-slate-300">{{ x.guardian_number_1 }}</td>
+                <td class="text-center p-2 border border-slate-300">{{ x.guardian_number_2 }}</td>
+              </tr>
+            {% endfor %}
+                
+            
+            
           </tbody>
         </table>
       </div>

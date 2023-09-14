@@ -72,7 +72,7 @@ def result(request):
     return render(request, 'main_app/result.html',context)
 
 def students_info(request):
-    one = Add_Student_info.objects.filter('class_1').order_by('id')
+    one = Add_Student_info.objects.filter(select_class='class_1').order_by('id')
     context = {
         'one': one,
     }

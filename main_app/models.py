@@ -136,6 +136,7 @@ class Add_Student_info(models.Model):
     student_image = models.ImageField(upload_to='student_image')
     guardian_number_1 = models.CharField(max_length=15, blank=True, null=True)
     guardian_number_2 = models.CharField(max_length=15, blank=True, null=True)
+    address = models.CharField(max_length=500, blank=True, null=True)
     Section =(
         ('ক','ক'),
         ('খ','খ'),
