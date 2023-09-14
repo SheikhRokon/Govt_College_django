@@ -72,4 +72,8 @@ def result(request):
     return render(request, 'main_app/result.html',context)
 
 def students_info(request):
-    return render(request, 'main_app/student_info.html')
+    one = Add_Student_info.objects.filter('class_1').order_by('id')
+    context = {
+        'one': one,
+    }
+    return render(request, 'main_app/student_info.html', context)
