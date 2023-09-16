@@ -151,6 +151,35 @@ class Add_Student_info(models.Model):
     def __str__(self):
         return self.student_name + ' (' + self.select_class +')' + '( ' + self.select_sections + ' )'
     
+class contatc_address(models.Model):
+    address = models.CharField(max_length= 200)
+    number1 = models.CharField(max_length=15)
+    number2 = models.CharField(max_length=15,blank= True, null=True)
+    email1 = models.CharField(max_length=50)
+    email2 = models.CharField(max_length=50, blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = 'Contatc Addresss'
+
+    def __str__(self):
+        return self.address
+    
+class contact_form(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=50)
+    number = models.CharField(max_length=15)
+    subject = models.CharField(max_length=200)
+    massage = models.CharField(max_length=500)
+    
+
+    class Meta:
+        verbose_name_plural = 'Contact Form'
+
+    def __str__(self):
+        return self.name
+    
+    
+    
              
 
 
