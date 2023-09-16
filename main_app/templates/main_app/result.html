@@ -20,23 +20,36 @@
                 <th class="p-2 border border-slate-300">ডাউনলোড</th>
               </tr>
             </thead>
-            
+
             {% for x in results %}
             <tbody class="text-sm">
               <tr>
                 <td class="text-center p-2 border border-slate-300">{{ x.id }}</td>
-                <td class="text-center p-2 border border-slate-300"><a href="{{x.result_file.url}}">{{ x.title }}</a></td>
-                <td class=" text-center p-2 border border-slate-300"><a href="{{x.result_file.url}}">{{ x.date }}</a></td>
                 <td class="text-center p-2 border border-slate-300">
-                  <a href="{{x.result_file.url}}" download ><i class="fa-solid fa-download text-xl text-navBg"></i
-                  ></a>
-                </td>
+                  {% if x.board_result_link %}
+                  <a href="{{x.board_result_link}}">{{ x.title }}</a></td>
+                  {% else %}
+                  <a href="{{x.result_file.url}}">{{ x.title }}</a></td>
+                  {% endif %}
+
+                <td class=" text-center p-2 border border-slate-300">
+                  
+                  {% if x.board_result_link %}
+                  <a href="{{x.board_result_link}}">{{ x.date }}</a></td>
+                  {% else %}
+                  <a href="{{x.result_file.url}}">{{ x.date }}</a></td>
+                  {% endif %}
+                    
+                  
+                <td class="text-center p-2 border border-slate-300  text-navBg">
+                {% if x.board_result_link %}
+                  <a href="{{ x.board_result_link }}">Click</a>
+                {% else %}
+                  <a href="{{ x.result_file.url }}" download><i class="fa-solid fa-download text-xl text-navBg"></i></a>
+                {% endif %}
               </tr>
-              
             </tbody>
             {% endfor %}
-              
-            
           </table>
         </div>
       </div>

@@ -25,10 +25,8 @@
             <tbody class="text-sm">
               <tr>
                 <td class="text-center p-2 border border-slate-300">{{ x.id }}</td>
-                <td class="text-center p-2 border border-slate-300">
-                  {{ x.title }}
-                </td>
-                <td class=" text-center p-2 border border-slate-300">{{ x.date }}</td>
+                <td class="text-center p-2 border border-slate-300"><a href="{{x.notice_file.url}}">{{ x.title }}</a></td>
+                <td class=" text-center p-2 border border-slate-300"><a href="{{x.notice_file.url}}">{{ x.date }}</a></td>
                 <td class="text-center p-2 border border-slate-300">
                   <a href="{{x.notice_file.url}}" download ><i class="fa-solid fa-download text-xl text-navBg"></i
                   ></a>

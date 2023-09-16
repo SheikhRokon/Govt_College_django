@@ -66,10 +66,12 @@ def video_gallery(request):
 
 def result(request):
     results = Result.objects.all().order_by('-id')
+    print(results)
+
     context = {
         'results': results
         }
-    return render(request, 'main_app/result.html',context)
+    return render(request, 'main_app/result.html', context)
 
 def students_info(request):
     if request.method == 'GET':

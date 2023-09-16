@@ -90,7 +90,8 @@ class Video_gallery(models.Model):
 class Result(models.Model):
     title = models.CharField(max_length=500)
     date = models.DateTimeField(default=timezone.now)
-    result_file = models.FileField(upload_to='result/')
+    result_file = models.FileField(upload_to='result/', blank=True, null=True)
+    board_result_link = models.URLField(max_length=200,blank=True, null=True)
     
 
     class Meta:
