@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import *
+from .forms import *
+from django.contrib.auth import *
 
 # Create your views here.
 
@@ -66,7 +68,6 @@ def video_gallery(request):
 
 def result(request):
     results = Result.objects.all().order_by('-id')
-    print(results)
 
     context = {
         'results': results
@@ -83,11 +84,28 @@ def students_info(request):
         else:
             students = Add_Student_info.objects.all()
             print(students)
-    
+  
     context = {
         'students': students,
     }
     return render(request, 'main_app/student_info.html', context)
 
 def contact(request):
-    return render(request, 'main_app/contact.html')
+    addres = Contatc_address.objects.all() 
+    forms = ContactForm(request.POST)
+    if request.method == 'POST':
+        forms = ContactForm(request.POST)
+        print(forms)
+        if forms.is_valid():
+            forms.save()
+            return redirect('contact')
+        else:
+            forms =ContactForm()
+            return render(request,'userapp/contact.html') 
+    context = {
+        'forms': forms,
+        'addres': addres
+        }    
+    return render(request, 'main_app/contact.html', context)
+
+
