@@ -14,4 +14,6 @@ urlpatterns = [
      path('result/',result ,name='result'),
      path('students_info/',students_info ,name='students_info'),
      path('contact/',contact ,name='contact'),
+     path('admission/',admission ,name='admission'),
+     path('blog/',blog ,name='blog'),
 ]

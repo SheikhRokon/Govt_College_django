@@ -108,4 +108,10 @@ def contact(request):
         }    
     return render(request, 'main_app/contact.html', context)
 
+def admission(request):
+    return render(request, 'main_app/admission.html')
+
+def blog(request):
+    return render(request, 'main_app/blog.html')
+
 
