@@ -42,26 +42,10 @@
           >শিক্ষার্থীদের তথ্য</a
         >
       </li>
-      <li class="border-r border-gray-400 relative group">
-        <a
-          href="#"
-          class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
-          >ভর্তি <i class="fa-solid fa-caret-down"></i
-        ></a>
-        <ul
-          class="absolute w-full lg:w-max text-black lg:text-white bg-slate-300 lg:bg-navBg z-10 hidden group-hover:block"
+      <li class="border-r border-gray-400">
+        <a href="{% url 'admission' %}" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+          >ভর্তি</a
         >
-          <li>
-            <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
-              >সাব মেনু ১</a
-            >
-          </li>
-          <li>
-            <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
-              >সাব মেনু ২</a
-            >
-          </li>
-        </ul>
       </li>
       
       <li class="border-r border-gray-400">
@@ -80,7 +64,7 @@
         >
       </li>
       <li class="border-r border-gray-400">
-        <a href="" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
+        <a href="{% url 'blog' %}" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
           >ব্লগ</a
         >
       </li>
@@ -105,27 +89,7 @@
           </li>
         </ul>
       </li>
-      <li class="border-r border-gray-400 relative group">
-        <a
-          href="#"
-          class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
-          >বিভিন্ন তথ্য <i class="fa-solid fa-caret-down"></i
-        ></a>
-        <ul
-          class="absolute w-full lg:w-max text-black lg:text-white bg-slate-300 lg:bg-navBg z-10 hidden group-hover:block"
-        >
-          <li>
-            <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
-              >সাব মেনু ১</a
-            >
-          </li>
-          <li>
-            <a href="" class="py-2 px-5 block text-sm lg:hover:bg-navHover"
-              >সাব মেনু ২</a
-            >
-          </li>
-        </ul>
-      </li>
+      
       <li class="">
         <a href="{% url 'contact' %}" class="py-3 px-5 xl:px-6 block text-sm hover:bg-navHover"
           >যোগাযোগ</a
