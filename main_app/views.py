@@ -124,4 +124,9 @@ def detalisBlog(request,pk):
     
     return render(request, 'main_app/detalisBlog.html', context)
 
+def admission(request):
+    addmission = Admission.objects.all()
+    context = {'addmission':addmission}
+    return render(request, 'main_app/admission.html', context)
+
 

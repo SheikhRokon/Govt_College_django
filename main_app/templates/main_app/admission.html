@@ -10,70 +10,14 @@
       </div>
       <!-- প্রথম শ্রেণি - নবম শ্রেণি ভর্তি প্রক্রিয়া -->
       <div class="md:w-3/4 m-auto rounded-md mb-8">
+
         <div class="bg-[#f5f5f5] w-full p-8">
-          <h3 class="text-xl font-semibold mb-4">
-            প্রথম শ্রেণি - নবম শ্রেণির ভর্তি প্রক্রিয়া
-          </h3>
-          <p class="mb-4 text-sm lg:text-base">
-            বিস্তারিতঃ বর্তমানে কলেজ শাখায় বিজ্ঞান বিভাগে (বাংলা মাধ্যম) রয়েছে
-            ০৬টি শাখা, মানবিক ও ব্যাবসায় শিক্ষা বিভাগে ০২টি করে শাখা এবং ইংলিশ
-            ভার্সনে রয়েছে ০১টি শাখা। একাদশ ও দ্বাদশ শাখা মিলিয়ে কলেজে প্রায় ২১০০
-            মেয়ে অধ্যয়নরত আছে। একাদশ ও দ্বাদশ শ্রেণিতে প্রতি বিষয়ে নিয়মিত শ্রেণি
-            পরীক্ষা নেয়া হয় এবং প্রতি বছর সেমিস্টার পদ্ধতিতে দুটি পরীক্ষা
-            অনুষ্ঠিত হয়। প্রতি বছর ঈর্ষনীয় ফলাফলের মধ্য দিয়ে এগিয়ে যাচ্ছে আমাদের
-            মেয়েরা। কলেজ শাখায় গড়ে পাশের হার ৯৯.৫০। আর জি পি এ ৫ পাওয়ার হার গড়ে
-            প্রায় ৫৬%। কলেজের মেয়েরা পড়াশুনার পাশিপাশি বিভিন্ন সাংস্কৃতিক
-            কার্যক্রমেও অংশগ্রহণ করছে সফলতার সাথে। কলেজে রয়েছে বিজ্ঞান ক্লাব,
-            বিজনেস ক্লাব, ডিবেটিং ক্লাব এবং ইংলিশ ক্লাব। এই ক্লাবগুলোতে অংশগ্রহণ
-            করে বিভিন্ন সময়ে মেয়েরা বিভিন্ন পুরস্কার অর্জনের মধ্য দিয়ে
-            প্রতিষ্ঠানের সুনাম অক্ষুন্ন রেখেছে।
-          </p>
-          <div class="py-2">
-            <h4 class="font-semibold">প্রয়োজনীয় ডকুমেন্ট</h4>
-            <ul
-              class="list-decimal bg-slate-200 py-4 px-8 text-sm lg:text-base"
-            >
-              <li>শিক্ষার্থীর ছবি (পাসপোর্ট সাইজ)</li>
-              <li>শিক্ষার্থীর জন্মসনদ</li>
-              <li>পিতার জাতীয় পরিচয়পত্র সনদ</li>
-              <li>মাতার জাতীয় পরিচয়পত্র সনদ</li>
-              <li>ট্র্যান্সফার সার্টিফিকেট</li>
-            </ul>
-          </div>
+          {% for x in addmission %}
+            {{ x.admission_info|safe }}
+          {% endfor %}
         </div>
       </div>
-      <div class="lg:w-3/4 m-auto rounded-md mb-8">
-        <div class="bg-[#f5f5f5] w-full p-8">
-          <h3 class="text-xl font-semibold mb-4">
-            একাদশ-দ্বাদশ শ্রেণির ভর্তি প্রক্রিয়া
-          </h3>
-          <p class="mb-4 text-sm lg:text-base">
-            বিস্তারিতঃ The XI Class Admission 2023–2024 of all government and
-            private colleges will be completed in a few steps. Admission
-            applications will be accepted in three phases. The merit list will
-            be published at the end of each step of the application process.
-            Students on the merit list have to confirm admission within the
-            stipulated time frame. Three merit lists will be published for the
-            three-step application. Two migration results will be published.
-            After that, the final merit list will be published. Based on the
-            final merit list, the XI Class Admission activities will start after
-            the completion of all the steps. The student has to complete
-            admission to the nominated college within the stipulated time frame.
-          </p>
-          <div class="py-2">
-            <h4 class="font-semibold">প্রয়োজনীয় ডকুমেন্ট</h4>
-            <ul
-              class="list-decimal bg-slate-200 py-4 px-8 text-sm lg:text-base"
-            >
-              <li>শিক্ষার্থীর ছবি (পাসপোর্ট সাইজ)</li>
-              <li>শিক্ষার্থীর জন্মসনদ</li>
-              <li>পিতার জাতীয় পরিচয়পত্র সনদ</li>
-              <li>মাতার জাতীয় পরিচয়পত্র সনদ</li>
-              <li>ট্র্যান্সফার সার্টিফিকেট</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      
     </main>
 
 {% endblock %}
