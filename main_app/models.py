@@ -178,6 +178,29 @@ class Contact_form(models.Model):
     def __str__(self):
         return self.name
     
+class Blog(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='blog_images')
+    discription = RichTextUploadingField()
+    date = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        verbose_name_plural = 'Blogs'
+
+    def __str__(self):
+        return self.title
+    
+class Admission(models.Model):
+    title = models.CharField(max_length=100)
+    admission_info = RichTextUploadingField()
+    class Meta:
+        verbose_name_plural = 'Admissions'
+        
+    def __str__(self):
+        return self.title
+    
+    
+    
     
     
              
