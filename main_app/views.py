@@ -118,4 +118,10 @@ def blog(request):
         }
     return render(request, 'main_app/blog.html',context)
 
+def detalisBlog(request,pk):
+    d_blog = Blog.objects.get(pk=pk)
+    context = {'d_blog':d_blog}
+    
+    return render(request, 'main_app/detalisBlog.html', context)
+
 
