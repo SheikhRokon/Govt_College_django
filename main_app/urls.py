@@ -16,4 +16,5 @@ urlpatterns = [
      path('contact/',contact ,name='contact'),
      path('admission/',admission ,name='admission'),
      path('blog/',blog ,name='blog'),
+     path('detalisBlog/<pk>',detalisBlog ,name='detalisBlog'),
 ]
