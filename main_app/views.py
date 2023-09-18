@@ -112,6 +112,10 @@ def admission(request):
     return render(request, 'main_app/admission.html')
 
 def blog(request):
-    return render(request, 'main_app/blog.html')
+    blog = Blog.objects.all().order_by('?')
+    context ={
+        'blog': blog
+        }
+    return render(request, 'main_app/blog.html',context)
 
 

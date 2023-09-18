@@ -11,10 +11,12 @@
       </div>
 
       <div class="lg:w-3/4 md:flex m-auto rounded-md mb-8">
+        
+        {% for x in blog %}
         <div class="grid md:grid-cols-2 gap-5">
           <div class="bg-[#f5f5f5]">
             <img
-              src="../static/img/6.jpg"
+              src="{{x.image.url}}"
               alt=""
               class="h-48 md:h-56 lg:h-72 w-full"
             />
@@ -23,17 +25,11 @@
                 href=""
                 class="block text-2xl text-navBg font-semibold mb-6 after:h-1 after:w-14 after:block after:bg-navBg after:rounded-e-lg hover:underline"
               >
-                দারুশা কলেজ, রাজশাহী
+               {{ x.title }}
               </a>
 
               <p class="text-sm mb-4">
-                অংশ অংশভাক আঁইশ ইঁচড়েপাকা ঈক্ষণ ঈদৃক অংশভাগী জওয়ান অংশাঙ্কিত
-                ইউক্যালিপটাস অংশাবতার হালহদিশ পিতৃতর্পণ টকানো ঈক্ষিত জগজ্জন
-                তকতনামা আঁকুবাঁকু পঁইছা জগঝপ্প পঁহুছা দ্রাবিড়ী আঁকুড়ি ঈদৃক
-                জগদম্বা টঙ্ক অংশিন্‌ জগদ্গৌরী আঁচা তকরার তিলপিটালি গজ-দাঁত অংশু
-                ঈপ্সনীয় পইতা শংকরাভরণ হংসগমন পকড় অংশুধর ঈপ্সু ঈর্ষী জগদ্ধাত্রী
-                আঁজনাই তক্তি শংসনপত্র হংসারূঢ়া দংশল তক্ষক অংশুমান ইকেবানা
-                জগদ্বন্ধু ঈশিত্ব ইক্ষ্বাকু আঁজি অংসকুট টঙ্কক তক্ষণাস্ত্র পকোড়া
+               {{ x.discription|safe|slice:200 }}
               </p>
               <div class="flex justify-between">
                 <a
@@ -41,77 +37,16 @@
                   class="br-navBg py-2 px-5 text-white bg-navBg text-xs font-sans rounded-sm hover:underline"
                   >Read more</a
                 >
-                <span class="text-xs text-gray-500 font-sans">12/06/2023</span>
+                <span class="text-xs text-gray-500 font-sans">{{ x.date.date }}</span>
               </div>
             </div>
           </div>
-          <div class="bg-[#f5f5f5]">
-            <img
-              src="../static/img/6.jpg"
-              alt=""
-              class="h-48 md:h-56 lg:h-72 w-full"
-            />
-            <div class="p-6">
-              <a
-                href=""
-                class="block text-2xl text-navBg font-semibold mb-6 after:h-1 after:w-14 after:block after:bg-navBg after:rounded-e-lg hover:underline"
-              >
-                দারুশা কলেজ, রাজশাহী
-              </a>
-
-              <p class="text-sm mb-4">
-                অংশ অংশভাক আঁইশ ইঁচড়েপাকা ঈক্ষণ ঈদৃক অংশভাগী জওয়ান অংশাঙ্কিত
-                ইউক্যালিপটাস অংশাবতার হালহদিশ পিতৃতর্পণ টকানো ঈক্ষিত জগজ্জন
-                তকতনামা আঁকুবাঁকু পঁইছা জগঝপ্প পঁহুছা দ্রাবিড়ী আঁকুড়ি ঈদৃক
-                জগদম্বা টঙ্ক অংশিন্‌ জগদ্গৌরী আঁচা তকরার তিলপিটালি গজ-দাঁত অংশু
-                ঈপ্সনীয় পইতা শংকরাভরণ হংসগমন পকড় অংশুধর ঈপ্সু ঈর্ষী জগদ্ধাত্রী
-                আঁজনাই তক্তি শংসনপত্র হংসারূঢ়া দংশল তক্ষক অংশুমান ইকেবানা
-                জগদ্বন্ধু ঈশিত্ব ইক্ষ্বাকু আঁজি অংসকুট টঙ্কক তক্ষণাস্ত্র পকোড়া
-              </p>
-              <div class="flex justify-between">
-                <a
-                  href=""
-                  class="br-navBg py-2 px-5 text-white bg-navBg text-xs font-sans rounded-sm hover:underline"
-                  >Read more</a
-                >
-                <span class="text-xs text-gray-500 font-sans">12/06/2023</span>
-              </div>
-            </div>
-          </div>
-          <div class="bg-[#f5f5f5]">
-            <img
-              src="../static/img/6.jpg"
-              alt=""
-              class="h-48 md:h-56 lg:h-72 w-full"
-            />
-            <div class="p-6">
-              <a
-                href=""
-                class="block text-2xl text-navBg font-semibold mb-6 after:h-1 after:w-14 after:block after:bg-navBg after:rounded-e-lg hover:underline"
-              >
-                দারুশা কলেজ, রাজশাহী
-              </a>
-
-              <p class="text-sm mb-4">
-                অংশ অংশভাক আঁইশ ইঁচড়েপাকা ঈক্ষণ ঈদৃক অংশভাগী জওয়ান অংশাঙ্কিত
-                ইউক্যালিপটাস অংশাবতার হালহদিশ পিতৃতর্পণ টকানো ঈক্ষিত জগজ্জন
-                তকতনামা আঁকুবাঁকু পঁইছা জগঝপ্প পঁহুছা দ্রাবিড়ী আঁকুড়ি ঈদৃক
-                জগদম্বা টঙ্ক অংশিন্‌ জগদ্গৌরী আঁচা তকরার তিলপিটালি গজ-দাঁত অংশু
-                ঈপ্সনীয় পইতা শংকরাভরণ হংসগমন পকড় অংশুধর ঈপ্সু ঈর্ষী জগদ্ধাত্রী
-                আঁজনাই তক্তি শংসনপত্র হংসারূঢ়া দংশল তক্ষক অংশুমান ইকেবানা
-                জগদ্বন্ধু ঈশিত্ব ইক্ষ্বাকু আঁজি অংসকুট টঙ্কক তক্ষণাস্ত্র পকোড়া
-              </p>
-              <div class="flex justify-between">
-                <a
-                  href=""
-                  class="br-navBg py-2 px-5 text-white bg-navBg text-xs font-sans rounded-sm hover:underline"
-                  >Read more</a
-                >
-                <span class="text-xs text-gray-500 font-sans">12/06/2023</span>
-              </div>
-            </div>
-          </div>
+          
         </div>
+          
+        {% endfor %}
+          
+        
       </div>
     </main>
 {% endblock %}
